@@ -22,12 +22,8 @@
 
 			<f:facet name="header">
 				<p:spacer height="30"></p:spacer>
-				<div align="center" style="position: absolute; top: 20px; width: 95%;">
-					<p:outputLabel value="JSF e JPA - Naiguel Santos - UPF"></p:outputLabel>
-				</div>
-				
 				<div align="left" style="position: absolute; top: 20px; width: 95%;">
-					<p:outputLabel value="Listagem dos Grupos"></p:outputLabel>
+					<p:outputLabel value="Projeto JSF - Naiguel Santos - UPF - Listagem dos Grupos"></p:outputLabel>
 				</div>
 				<div align="right"
 					style="position: absolute; top: 12px; width: 95%;">

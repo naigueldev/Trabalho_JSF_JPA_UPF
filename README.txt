@@ -27,9 +27,6 @@ private List<RecebimentoItem> itensRecebidos = new ArrayList<RecebimentoItem>();
 
 @Pattern(regexp = "([0-9]{2}[.]?[0-9]{3}[.]?[0-9]{3}[/]?[0-9]{4}[-]?[0-9]{2})")
 
-#Inserindo no BD manualmente para teste
-
-INSERT INTO grupo (id,nome)
-VALUES ('1','Refrigerante')
-
-select * from grupo
+#Para gerar o ID em sequência use:
+@Id
+@GeneratedValue(strategy=GenerationType.SEQUENCE)

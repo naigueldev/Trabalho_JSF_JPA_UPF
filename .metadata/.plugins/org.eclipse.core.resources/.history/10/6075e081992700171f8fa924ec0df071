@@ -11,8 +11,8 @@
 <h:body onload="#{grupoCrud.inicializarLista()}">
 	<h:form id="formLista">
 
-		<!-- <p:panel style="text-align: center;"
-			header="Projeto JSF - Naiguel Santos - UPF"></p:panel> -->
+		<p:panel style="text-align: center;"
+			header="Projeto JSF - Naiguel Santos - UPF"></p:panel>
 
 
 		<!-- Ainstancia do manage bean se escreve com minusculo - A classe inicia com letra MAIUSCULA -->
@@ -22,10 +22,6 @@
 
 			<f:facet name="header">
 				<p:spacer height="30"></p:spacer>
-				<div align="center" style="position: absolute; top: 20px; width: 95%;">
-					<p:outputLabel value="JSF e JPA - Naiguel Santos - UPF"></p:outputLabel>
-				</div>
-				
 				<div align="left" style="position: absolute; top: 20px; width: 95%;">
 					<p:outputLabel value="Listagem dos Grupos"></p:outputLabel>
 				</div>

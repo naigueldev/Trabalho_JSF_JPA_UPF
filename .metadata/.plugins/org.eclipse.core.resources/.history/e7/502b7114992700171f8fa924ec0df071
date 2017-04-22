@@ -12,14 +12,14 @@
 
 	<h:form id="formGrupo">
 		<p:growl></p:growl>
-		<p:panelGrid columns="2" style="margin: 0 auto;">
+		<p:panelGrid columns="2">
 
 			<f:facet name="header">
 				<p:outputLabel value="Edição do Grupo" />
 			</f:facet>
 
 			<p:outputLabel value="Código"></p:outputLabel>
-			<p:inputText readonly="true" size="5" value="#{grupoCrud.objeto.id}">
+			<p:inputText size="5" value="#{grupoCrud.objeto.id}">
 
 			</p:inputText>
 
