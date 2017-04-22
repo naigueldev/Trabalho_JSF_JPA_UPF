@@ -1,10 +1,17 @@
 package br.upf.trabalhojpa.estoque;
 
+import static javax.persistence.GenerationType.SEQUENCE;
 import java.io.Serializable;
 import java.lang.Float;
 import java.lang.Integer;
 import java.lang.String;
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
 
 /**
  * Entity implementation class for Entity: Produto
@@ -16,10 +23,25 @@ public class Produto implements Serializable {
 
 	   
 	@Id
+//	@GeneratedValue(strategy = SEQUENCE, generator = "genProdutoId")
+//	@SequenceGenerator(name = "genProdutoId", sequenceName = "seqProdutoId")
 	private Integer id;
+	
+	@NotEmpty(message="O nome do produto é obrigatório.")
+	@Length(min=2, max=60, message="O nome do produto deve ter {max} caracteres.")
 	private String nome;
+	
+	@NotEmpty(message="A Unidade Estoque é obrigatório.")
+	@Length(min=1, max=10, message="O nome do produto deve ter {max} caracteres.")
 	private String unidadeEstoque;
+	
+	@NotNull
+	@Min(value=0)
+	@Pattern(regexp="0")
+//	READONLY, Gerado pelos movimentos de recebimento e entrega
 	private Float quantidadeEstoque;
+	
+	@NotNull
 	private Grupo grupo;
 	private static final long serialVersionUID = 1L;
 

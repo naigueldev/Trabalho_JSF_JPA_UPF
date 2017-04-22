@@ -3,6 +3,8 @@ package br.upf.trabalhojpa.estoque;
 import java.io.Serializable;
 import java.lang.Float;
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 /**
  * Entity implementation class for Entity: ProdutoAcabado
@@ -14,8 +16,17 @@ public class ProdutoAcabado implements Serializable {
 
 	@Id
 	private Integer id;
+	
+	@NotNull
+	@Min(0)
+//	Readonly , Gerado pelos movimentos da produção de lote. Lotes iniciados e ainda não finalizados
 	private Float quantidadeEmProducao;
+	
+	@NotNull
+	@Min(0)
+//	Readonly, Gerado pelos movimentos da produção de lote e entrega. Lotes iniciados e finalizados e ainda não entregues.
 	private Float quantidadeParaEntrega;
+	
 	private Produto produto;
 	private static final long serialVersionUID = 1L;
 

@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.lang.Float;
 import java.lang.Integer;
 import javax.persistence.*;
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.NotNull;
 
 /**
  * Entity implementation class for Entity: RecebimentoItem
@@ -15,11 +17,33 @@ public class RecebimentoItem implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy=GenerationType.SEQUENCE)
 	private Integer id;
+	
+//	Maior que zero
+//	Ao atualizar este dado, atualizar a quantidade em estoque no produto
+	@NotNull
+	@DecimalMin(value="0",inclusive=false)
 	private Float quantidade;
+	
+//	Maior que zero
+//	Ao informar, atualizar último custo e custo médio na matéria prima.
+	@NotNull
+	@DecimalMin(value="0",inclusive=false)
 	private Float valorUnitario;
+	
+//	Transient.
+//	Calculado: quantidade * vrlUnitario
+	@NotNull
+	@DecimalMin(value="0",inclusive=false)
 	private Float total;
+	
+	@NotNull
 	private MateriaPrima materiaPrima;
+	
+	@NotNull
+	private Recebimento recebimento;
+	
 	private static final long serialVersionUID = 1L;
 
 	public RecebimentoItem() {

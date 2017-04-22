@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.lang.Float;
 import java.lang.Integer;
 import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 /**
  * Entity implementation class for Entity: MateriaPrima
@@ -16,8 +18,21 @@ public class MateriaPrima implements Serializable {
 	   
 	@Id
 	private Integer id;
+	
+	@NotNull
+	@Min(0)
 	private Float estoqueMinimo;
+	
+	@NotNull
+	@Min(value = 0)
+//	Readonly
+//	Gerado pelos movimentos de recebimento de matéria prima
 	private Float ultimoCusto;
+	
+	@NotNull
+	@Min(value = 0)
+//	Readonly
+//	Gerado pelos movimentos de recebimento de matéria prima
 	private Float custoMedio;
 	private Produto produto;
 	private static final long serialVersionUID = 1L;

@@ -6,6 +6,13 @@ import java.lang.String;
 import java.util.Date;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Pattern;
+
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
+import org.hibernate.validator.constraints.br.CPF;
 
 /**
  * Entity implementation class for Entity: PessoaFisica
@@ -17,9 +24,21 @@ public class PessoaFisica implements Serializable {
 
 	@Id
 	private Integer id;
+	
+	@Pattern(regexp = "([0-9]{3}[.]?[0-9]{3}[.]?[0-9]{3}[-]?[0-9]{2})")
+	@NotEmpty(message="O CPF é obrigatório.")
+	@Length(min=14, max=14, message="O cnpj deve ter {max} caracteres.")
+	@CPF
 	private String cpf;
+	
+	@Length(min=10, max=20, message="O rg deve ter {max} caracteres.")
+	@NotEmpty(message="O RG é obrigatório.")
 	private String rg;
+	
+	@NotNull
+	@Past
 	private Date dataNascimento;
+	
 	private Pessoa pessoa;
 	private static final long serialVersionUID = 1L;
 
