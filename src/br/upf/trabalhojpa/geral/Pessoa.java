@@ -4,7 +4,14 @@ import java.io.Serializable;
 import java.lang.Integer;
 import java.lang.String;
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
+
+import static javax.persistence.GenerationType.SEQUENCE;
 
 /**
  * Entity implementation class for Entity: Pessoa
@@ -16,15 +23,41 @@ public class Pessoa implements Serializable {
 
 	   
 	@Id
+	@GeneratedValue(strategy = SEQUENCE, generator = "genPessoaId")
+	@SequenceGenerator(name = "genPessoaId", sequenceName = "seqPessoaId")
 	private Integer id;
+	
+	@NotEmpty(message="O nome da pessoa é obrigatório.")
+	@Length(min=2, max=60, message="O nome da pessoa deve ter {max} caracteres.")
 	private String nome;
+	
+	@NotEmpty(message="O endereço é obrigatório.")
+	@Length(min=0, max=10, message="O endereço deve ter {max} caracteres.")
 	private String endereco;
+	
+	@Length(min=0, max=10, message="O número deve ter {max} caracteres.")
 	private String numero;
+
+	@Length(min=0, max=40, message="O complemento deve ter {max} caracteres.")
 	private String complemento;
+	
+//	@Pattern(regexp="(^\\+(?:[0-9] ?){6,14}[0-9]$)")
+//	@Pattern(regexp="(^$|[0-9]{10})")
+	@Pattern(regexp = "([0-9]{2}[.]?[0-9]{3}[-]?[0-9]{3})")
+	@Length(min=0, max=10, message="O cep deve ter {max} caracteres.")
 	private String cep;
+	
+	@Length(min=0, max=40, message="O bairro deve ter {max} caracteres.")
 	private String bairro;
+	
+	@Email
+	@Length(min=0, max=80, message="O email deve ter {max} caracteres.")
 	private String email;
+	
+	@Length(min=0, max=20, message="O telefone deve ter {max} caracteres.")
 	private String telefone;
+	
+	@NotNull
 	private Cidade cidade;
 	
 	private static final long serialVersionUID = 1L;
