@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Bem vindo ao JSF 2.1 com PrimeFaces</title>
+</h:head>
+<h:body>
+	<h:form>
+		<p:panel header="p:panel: Painel para a página de Boas Vindas!">
+			<h:outputLabel>h:outputLabel: Este é um rótulo! </h:outputLabel>
+		</p:panel>
+	</h:form>
+
+	<h:form>
+		<p:panel header="p:panel: Painel para a página de Boas Vindas!">
+			<h:outputLabel>h:outputLabel: Este é um rótulo! </h:outputLabel>
+		</p:panel>
+		<p:panel header="Alguns componentes HTML do JSF">
+			<p:panelGrid columns="2">
+				<h:outputLabel>p:panelGrid columns=2</h:outputLabel>
+				<h:outputLabel>Um painel organizado em duas colunas!</h:outputLabel>
+				<h:outputLabel>h:inputText</h:outputLabel>
+				<h:inputText maxlength="10"></h:inputText>
+				<h:outputLabel>h:inputSecret</h:outputLabel>
+				<h:inputSecret></h:inputSecret>
+				<h:outputLabel>h:inputTextarea</h:outputLabel>
+				<h:inputTextarea rows="3" cols="30"></h:inputTextarea>
+				<h:outputLabel>h:selectOneMenu</h:outputLabel>
+				<h:selectOneMenu>
+					<f:selectItem itemValue="1" itemLabel="Item um"></f:selectItem>
+					<f:selectItem itemValue="2" itemLabel="Item dois"></f:selectItem>
+				</h:selectOneMenu>
+				<h:outputLabel>h:selectOneRadio</h:outputLabel>
+				<h:selectOneRadio>
+					<f:selectItem itemValue="1" itemLabel="Item um"></f:selectItem>
+					<f:selectItem itemValue="2" itemLabel="Item dois"></f:selectItem>
+				</h:selectOneRadio>
+				<h:outputLabel>h:selectOneListbox</h:outputLabel>
+				<h:selectOneListbox>
+					<f:selectItem itemValue="1" itemLabel="Item um"></f:selectItem>
+					<f:selectItem itemValue="2" itemLabel="Item dois"></f:selectItem>
+				</h:selectOneListbox>
+				<h:outputLabel>h:selectOneListbox</h:outputLabel>
+				<h:selectManyCheckbox>
+					<f:selectItem itemValue="1" itemLabel="Item um"></f:selectItem>
+					<f:selectItem itemValue="2" itemLabel="Item dois"></f:selectItem>
+				</h:selectManyCheckbox>
+				<h:outputLabel>h:selectBooleanCheckbox</h:outputLabel>
+				<h:selectBooleanCheckbox>Ativo</h:selectBooleanCheckbox>
+				<h:outputLabel>h:button</h:outputLabel>
+				<h:button value="Gravar"></h:button>
+			</p:panelGrid>
+		</p:panel>
+	</h:form>
+
+	<!-- TODO -->
+
+</h:body>
+</html>
