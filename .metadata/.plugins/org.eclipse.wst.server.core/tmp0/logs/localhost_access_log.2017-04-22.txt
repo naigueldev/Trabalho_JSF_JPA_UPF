@@ -319,3 +319,15 @@
 0:0:0:0:0:0:0:1 - - [22/Apr/2017:17:38:44 -0300] "GET /ProjetoTrabalhoJSF/Cadastros/Grupo/GrupoForm.xhtml HTTP/1.1" 200 4500
 0:0:0:0:0:0:0:1 - - [22/Apr/2017:17:39:23 -0300] "POST /ProjetoTrabalhoJSF/Cadastros/Grupo/GrupoForm.xhtml HTTP/1.1" 302 -
 0:0:0:0:0:0:0:1 - - [22/Apr/2017:17:39:24 -0300] "GET /ProjetoTrabalhoJSF/Cadastros/Grupo/GrupoList.xhtml HTTP/1.1" 200 11953
+0:0:0:0:0:0:0:1 - - [22/Apr/2017:17:52:22 -0300] "POST /ProjetoTrabalhoJSF/Cadastros/Grupo/GrupoList.xhtml HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [22/Apr/2017:17:52:22 -0300] "GET /ProjetoTrabalhoJSF/Cadastros/Grupo/GrupoForm.xhtml HTTP/1.1" 200 4500
+0:0:0:0:0:0:0:1 - - [22/Apr/2017:17:53:20 -0300] "POST /ProjetoTrabalhoJSF/Cadastros/Grupo/GrupoForm.xhtml HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [22/Apr/2017:17:53:21 -0300] "GET /ProjetoTrabalhoJSF/Cadastros/Grupo/GrupoList.xhtml HTTP/1.1" 200 11953
+0:0:0:0:0:0:0:1 - - [22/Apr/2017:17:53:25 -0300] "POST /ProjetoTrabalhoJSF/Cadastros/Grupo/GrupoList.xhtml HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [22/Apr/2017:17:53:25 -0300] "GET /ProjetoTrabalhoJSF/Cadastros/Grupo/GrupoForm.xhtml HTTP/1.1" 200 4536
+0:0:0:0:0:0:0:1 - - [22/Apr/2017:17:53:26 -0300] "POST /ProjetoTrabalhoJSF/Cadastros/Grupo/GrupoForm.xhtml HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [22/Apr/2017:17:53:27 -0300] "GET /ProjetoTrabalhoJSF/Cadastros/Grupo/GrupoList.xhtml HTTP/1.1" 200 11953
+0:0:0:0:0:0:0:1 - - [22/Apr/2017:17:53:29 -0300] "POST /ProjetoTrabalhoJSF/Cadastros/Grupo/GrupoList.xhtml HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [22/Apr/2017:17:53:29 -0300] "GET /ProjetoTrabalhoJSF/Cadastros/Grupo/GrupoForm.xhtml HTTP/1.1" 200 4528
+0:0:0:0:0:0:0:1 - - [22/Apr/2017:17:53:52 -0300] "POST /ProjetoTrabalhoJSF/Cadastros/Grupo/GrupoForm.xhtml HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [22/Apr/2017:17:53:53 -0300] "GET /ProjetoTrabalhoJSF/Cadastros/Grupo/GrupoList.xhtml HTTP/1.1" 200 11953
