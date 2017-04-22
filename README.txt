@@ -21,3 +21,8 @@ maior que ZERO, sem incluí-lo.
 @Size(min = 1)
 @ElementCollection
 private List<RecebimentoItem> itensRecebidos = new ArrayList<RecebimentoItem>();
+
+#Validar um CNPJ
+#Fonte: https://github.com/hibernate/hibernate-validator/blob/master/engine/src/main/java/org/hibernate/validator/constraints/br/CNPJ.java
+
+@Pattern(regexp = "([0-9]{2}[.]?[0-9]{3}[.]?[0-9]{3}[/]?[0-9]{4}[-]?[0-9]{2})")
