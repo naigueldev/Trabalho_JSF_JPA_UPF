@@ -1,0 +1,25 @@
+package br.upf.projetojsf.estoque;
+
+import java.util.List;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
+
+import br.upf.trabalhojpa.estoque.Grupo;
+
+
+
+@ManagedBean
+@SessionScoped
+public class GrupoCrud {
+	private List<Grupo> lista;
+	
+	
+	public void inicializarLista() {
+		EntityManager em = Persistence.createEntityManagerFactory("") Ge.getInstance().getEntityManager();
+		lista = em.createQuery("from Cidade").getResultList();
+		em.close();
+	}
+}

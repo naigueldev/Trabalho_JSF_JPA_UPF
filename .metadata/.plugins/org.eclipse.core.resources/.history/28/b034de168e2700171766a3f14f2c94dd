@@ -1,0 +1,5 @@
+package br.upf.estoque.beans;
+
+public class GrupoCrud {
+
+}

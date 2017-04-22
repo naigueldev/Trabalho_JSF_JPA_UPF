@@ -2,6 +2,9 @@
     <wb-module deploy-name="ProjetoTrabalhoJSF">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="ProjetoTrabalhoJPA.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ProjetoTrabalhoJPA/ProjetoTrabalhoJPA">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="ProjetoTrabalhoJSF"/>
         <property name="java-output-path" value="/ProjetoTrabalhoJSF/build/classes"/>
     </wb-module>

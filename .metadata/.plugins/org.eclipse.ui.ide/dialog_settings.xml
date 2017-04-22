@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="F:\DOCUMENTOS (E)\UPF - ANALISE E DESENVOLVIMENTO DE SISTEMAS\5º SEMESTRE\TÓPICOS ESPECIAIS EM DESENVOLVIMENTO DE SISTEMAS I\7 abril - 13 abril\EclipseNeonX64\workspace\ProjetoExemploJSF"/>
 		<item value="C:\EclipseNeon2\workspace\ProjetoTrabalhoJPA"/>
 	</list>
 	<section name="CleanDialogSettings">

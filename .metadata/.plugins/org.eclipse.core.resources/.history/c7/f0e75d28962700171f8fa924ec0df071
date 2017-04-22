@@ -1,0 +1,82 @@
+package br.upf.projetojsf.estoque;
+
+import java.util.List;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
+
+import br.upf.trabalhojpa.estoque.Grupo;
+
+@ManagedBean
+@SessionScoped
+public class GrupoCrud {
+	private List<Grupo> lista;
+	private Grupo objeto;
+
+	public String incluir() {
+		objeto = new Grupo();
+
+		// Busco os dados no formulário com o return
+		// O faces framework faz um redirecionamento
+
+		return "GrupoForm?faces-redirect=true";
+	}
+
+	public String alterar(Integer id) {
+
+		EntityManager em = Persistence.createEntityManagerFactory("ProjetoTrabalhoJPA").createEntityManager();
+		objeto = em.find(Grupo.class, id);
+
+		em.close();
+		return "GrupoForm?faces-redirect=true";
+	}
+
+	public String gravar() {
+		EntityManager em = Persistence.createEntityManagerFactory("ProjetoTrabalhoJPA").createEntityManager();
+
+		em.getTransaction().begin();
+		em.merge(objeto);
+		em.getTransaction().commit();
+		em.close();
+		return "GrupoList?faces-redirect=true";
+	}
+	
+	public String cancelar() {
+		return "GrupoList?faces-redirect=true";
+	}
+	
+	public String excluir(Integer id) {
+		EntityManager em = Persistence.createEntityManagerFactory("ProjetoTrabalhoJPA").createEntityManager();
+		objeto = em.find(Grupo.class, id);
+		em.getTransaction().begin();
+		em.remove(objeto);
+		em.getTransaction().commit();
+		em.close();
+		return "CidadeList?faces-redirect=true";
+	}
+
+	public void inicializarLista() {
+		EntityManager em = Persistence.createEntityManagerFactory("ProjetoTrabalhoJPA").createEntityManager();
+		lista = em.createQuery("from Grupo").getResultList();
+		em.close();
+	}
+
+	public List<Grupo> getLista() {
+		return lista;
+	}
+
+	public void setLista(List<Grupo> lista) {
+		this.lista = lista;
+	}
+
+	public Grupo getObjeto() {
+		return objeto;
+	}
+
+	public void setObjeto(Grupo objeto) {
+		this.objeto = objeto;
+	}
+
+}

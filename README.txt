@@ -26,3 +26,10 @@ private List<RecebimentoItem> itensRecebidos = new ArrayList<RecebimentoItem>();
 #Fonte: https://github.com/hibernate/hibernate-validator/blob/master/engine/src/main/java/org/hibernate/validator/constraints/br/CNPJ.java
 
 @Pattern(regexp = "([0-9]{2}[.]?[0-9]{3}[.]?[0-9]{3}[/]?[0-9]{4}[-]?[0-9]{2})")
+
+#Inserindo no BD manualmente para teste
+
+INSERT INTO grupo (id,nome)
+VALUES ('1','Refrigerante')
+
+select * from grupo

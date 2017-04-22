@@ -1,0 +1,12 @@
+package br.upf.projetojsf.estoque;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+import antlr.collections.List;
+
+@ManagedBean
+@SessionScoped
+public class GrupoCrud {
+	private List<Grupo> lista;
+}

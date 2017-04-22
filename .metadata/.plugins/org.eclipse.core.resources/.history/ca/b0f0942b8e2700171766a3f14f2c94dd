@@ -1,0 +1,10 @@
+package br.upf.estoque.beans;
+
+import br.upf.topicos.beans.ManagedBean;
+import br.upf.topicos.beans.SessionScoped;
+
+@ManagedBean
+@SessionScoped
+public class GrupoCrud {
+
+}

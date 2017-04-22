@@ -3,6 +3,7 @@
 	<name>ProjetoTrabalhoJSF</name>
 	<comment></comment>
 	<projects>
+		<project>ProjetoTrabalhoJPA</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

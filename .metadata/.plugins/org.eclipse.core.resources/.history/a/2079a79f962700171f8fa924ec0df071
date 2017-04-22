@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title></title>
+</h:head>
+<h:body>
+
+	<h:form id="formGrupo">
+		<p:growl></p:growl>
+		<p:panelGrid columns="2">
+
+			<f:facet name="header">
+				<p:outputLabel value="Edição do Grupo" />
+			</f:facet>
+
+
+			<p:outputLabel value="Código"></p:outputLabel>
+			<p:inputText size="5" value="#{grupoCrud.objeto.id}">
+
+			</p:inputText>
+
+			<p:outputLabel value="Nome"></p:outputLabel>
+			<p:inputText id="nome" size="50" placeholder="Informe o nome"
+				value="#{grupoCrud.objeto.nome}">
+				<p:message for="nome" />
+			</p:inputText>
+
+			<f:facet name="footer">
+				<p:commandButton value="Gravar" action="#{grupoCrud.gravar}"
+					ajax="false" />
+				<p:commandButton value="Cancelar" action="#{grupoCrud.cancelar}"
+					ajax="false" immediate="true" />
+			</f:facet>
+		</p:panelGrid>
+	</h:form>
+
+
+</h:body>
+</html>
