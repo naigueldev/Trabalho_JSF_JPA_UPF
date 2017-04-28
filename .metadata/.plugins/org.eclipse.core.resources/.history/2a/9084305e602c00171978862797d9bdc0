@@ -1,6 +1,6 @@
 package br.upf.trabalhojpa.estoque;
 
-
+import static javax.persistence.GenerationType.SEQUENCE;
 
 import java.io.Serializable;
 import java.lang.Integer;
